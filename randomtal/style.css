@@ -1,0 +1,13 @@
+.opgave2 {
+  border: solid;
+  border-width: 5px;
+  margin-bottom: 20px;
+  border-color: pink;
+}
+
+.gaet {
+  border: solid;
+  border-width: 5px;
+  border-color: pink;
+  margin-top: 20px;
+}
