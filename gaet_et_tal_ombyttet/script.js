@@ -13,7 +13,15 @@ lavBtn.addEventListener("click", lavClick);
 rightBtn.addEventListener("click", rightClick);
 startBtn.addEventListener("click", startSpillet);
 
+hojBtn.disabled = true;
+lavBtn.disabled = true;
+rightBtn.disabled = true;
+
 function startSpillet() {
+  startBtn.disabled = true;
+  hojBtn.disabled = false;
+  lavBtn.disabled = false;
+  rightBtn.disabled = false;
   computerChoice = Math.floor((min + max) / 2);
   console.log("computerChoice", computerChoice);
   h2.textContent = computerChoice;
@@ -45,4 +53,8 @@ function reset() {
   min = 0;
   max = 101;
   computerChoice = 0;
+  startBtn.disabled = false;
+  hojBtn.disabled = true;
+  lavBtn.disabled = true;
+  rightBtn.disabled = true;
 }
