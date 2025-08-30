@@ -16,6 +16,9 @@ document.querySelector("#p1").textContent = "Tilfældigt tal " + Math.round(Math
 
 // Gæt et tal
 
+import { getRandomNum } from "/../utils/utils.js";
+const computerNum = getRandomNum(100);
+
 window.addEventListener("load", sidenVises);
 let tal = Math.round(Math.random() * 101);
 console.log("Gæt et tal " + tal);
