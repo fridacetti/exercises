@@ -1,0 +1,81 @@
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(74, 127, 199);
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(74, 127, 199);
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+thead {
+  background-color: rgb(228, 240, 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(200, 200, 200);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(245, 247, 250);
+}
+
+tbody > tr:hover {
+  background-color: rgb(74, 127, 199);
+  transition: background-color 0.2s;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+.knapper {
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.knapper button {
+  background-color: #5cacee; /* lys blå */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.knapper button:hover {
+  background-color: #3b8edc; /* mørkere blå */
+  transform: scale(1.05);
+}
+
+.knapper button:active {
+  transform: scale(0.95);
+}

@@ -12,24 +12,17 @@ const player2 = document.querySelector("#player2");
 
 addEventListenersToButtons();
 function addEventListenersToButtons() {
-  rockBtn.addEventListener("click", rockClick);
-  paperBtn.addEventListener("click", paperClick);
-  scissorsBtn.addEventListener("click", scissorsClick);
+  rockBtn.addEventListener("click", userKlik);
+  paperBtn.addEventListener("click", userKlik);
+  scissorsBtn.addEventListener("click", userKlik);
 }
-//Funktion til alle knapper
-function rockClick() {
-  console.log("ROCK");
-  userChoice = "rock";
-  handleRound();
-}
-function paperClick() {
-  console.log("PAPER");
-  userChoice = "paper";
-  handleRound();
-}
-function scissorsClick() {
-  console.log("SCISSORS");
-  userChoice = "scissors";
+// klik funktion
+function userKlik(evt) {
+  // console.log("evt", evt);
+  console.log("Choice", evt.target.dataset.choice);
+  userChoice = evt.target.dataset.choice;
+  // console.log("ROCK")
+  // userChoice = "rock"
   handleRound();
 }
 
