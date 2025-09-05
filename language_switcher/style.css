@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header,
+.top {
+  font-size: 55px;
+  background-color: #f7cbd2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer {
+  font-size: 55px;
+  background-color: #f39cab;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p {
+  font-size: 25px;
+  height: 330px;
+  background: radial-gradient(#f7cbd2, #f39cab, #ee788c);
+  text-align: center;
+  max-width: 75ch;
+}
+
+label {
+  font-size: 20px;
+}
