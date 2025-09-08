@@ -20,7 +20,7 @@ let locale = "da";
 const select = document.querySelector(".sprog");
 //vi laver en eventlistener på selectoren så den kan lytte efter ændringer
 select.addEventListener("change", (change) => {
-  //nedenfo r ændrer vi locale til det sprog  ved at tage fat i value
+  //nedenfor ændrer vi locale til det sprog  ved at tage fat i value
   locale = change.target.value;
   updateTexts();
 });
