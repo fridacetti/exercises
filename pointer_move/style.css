@@ -1,0 +1,8 @@
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  height: 800px;
+  --lightness: 50%; /* default */
+  background-color: hsl(47, 100%, var(--lightness));
+}
