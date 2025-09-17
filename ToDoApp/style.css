@@ -6,117 +6,108 @@
 body {
   background-color: #a19bf7;
 }
-/* Container look */
+
 #containere {
-  display: flex; /* Brug flexbox for at placere kolonner ved siden af hinanden */
-  gap: 40px; /* Afstand mellem kolonnerne */
-  width: 100%; /* Fylder hele bredden af sin parent */
-  max-width: 700px; /* Maksimal bredde, så det ikke fylder for meget på store skærme */
-  margin: 0 auto; /* Centrerer containeren horisontalt */
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   font-family: "Segoe UI", Roboto, sans-serif;
   margin-top: 20px;
 }
 
-/* === Hver kolonne i containeren (TO DO / DONE) === */
 .done_div,
 .todo_div {
-  background: #ffffffcc; /* Hvid med let gennemsigtighed */
-  backdrop-filter: blur(10px); /* Glass/blur-effekt bag kolonnen */
-  border-radius: 16px; /* Afrundede hjørner */
-  padding: 20px; /* Indvendig margin i kolonnen */
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
   flex: 1; /* Kolonnerne fylder lige meget i bredden */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* Blød skygge under kolonnen */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* === Overskrift === */
 h1 {
-  text-align: center; /* Centrer overskriftstekst */
-  font-size: 30px; /* Størrelse på overskriften */
-  font-weight: 600; /* Lidt tykkere tekst */
-  color: black; /* Mørkegrå farve på tekst */
-  margin: 0 0 20px 0; /* Afstand under overskriften */
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  margin: 0 0 20px 0;
 }
 h2 {
   font-size: 20px;
   color: #333;
 }
 
-/* === Inputfelt som noteslinje === */
 input[type="text"] {
   flex: 1; /* Fylder al tilgængelig plads i sin flex-container */
-  padding: 8px; /* Indvendig margin */
-  border: none; /* Ingen kant rundt om input */
+  padding: 8px;
+  border: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Kun bundlinje */
-  font-size: 16px; /* Tekststørrelse */
+  font-size: 16px;
   outline: none; /* Fjern standard fokusramme */
   background: transparent; /* Baggrund passer til kolonnen */
 }
 
-/* === Tilføj-knap === */
 button {
-  padding: 8px 14px; /* Indvendig margin i knap */
-  border: none; /* Ingen kant */
+  padding: 8px 14px;
+  border: none;
   background-color: #b8b3f5;
-  color: white; /* Hvid tekst */
-  font-size: 18px; /* Tekststørrelse */
-  border-radius: 8px; /* Afrundede hjørner på knap */
-  margin-left: 8px; /* Lidt afstand fra inputfeltet */
-  cursor: pointer; /* Vis pointer ved hover */
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-left: 8px;
+  cursor: pointer;
 }
 #submit {
   background-color: #ffadad;
-  border-radius: 20px; /* Afrundede hjørner på knap */
+  border-radius: 20px;
 }
 
-/* Hover-effekt på knap */
 button:hover {
-  background-color: #7c78b0; /* Mørkere blå når man holder musen over */
+  background-color: #7c78b0;
 }
 #submit:hover {
-  background-color: #df8c8c; /* Mørkere blå når man holder musen over */
-}
-/* === Lister (ul) === */
-ul {
-  list-style: none; /* Fjern bullets */
+  background-color: #df8c8c;
 }
 
-/* Hvert liste-element (li) */
+ul {
+  list-style: none;
+}
+
 ul li {
   display: flex; /* Flex for checkbox + tekst + evt. knap */
   align-items: center; /* Vertikal centrering */
-  gap: 12px; /* Afstand mellem elementer i li */
-  padding: 12px 0; /* Lodret padding */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Diskret linje under hver todo */
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* === Runde checkboxe === */
 li input[type="checkbox"] {
-  appearance: none; /* Fjern standard browser-udseende */
-  -webkit-appearance: none; /* Safari/Chrome */
-  width: 22px; /* Bredde */
-  height: 22px; /* Højde */
-  border: 2px solid #ccc; /* Grå kant */
-  border-radius: 50%; /* Rund form */
-  cursor: pointer; /* Pointer når man hover */
-  position: relative; /* For fluebenet pseudo-element */
-  transition: all 0.2s; /* Blød overgang ved ændringer */
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
 }
 
-/* Når checkbox er markeret */
 li input[type="checkbox"]:checked {
-  background-color: #ffadad; /* Fyldt blå cirkel */
-  border-color: #f9a1a1; /* Blå kant */
+  background-color: #ffadad;
+  border-color: #f9a1a1;
 }
 
-/* Fluebenet i midten af checkbox */
 li input[type="checkbox"]:checked::after {
   content: ""; /* pseudo-element */
   position: absolute;
-  left: 6px; /* Placering af fluebenet */
-  top: 1px; /* Placering af fluebenet */
-  width: 5px; /* Størrelse */
-  height: 12px; /* Størrelse */
-  border: solid white; /* Flueben farve */
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 12px;
+  border: solid white;
   border-width: 0 2px 2px 0; /* Tegner selve fluebenet */
   transform: rotate(45deg); /* Roterer til korrekt vinkling */
 }
